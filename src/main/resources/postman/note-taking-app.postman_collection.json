@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "81419128-dc90-402a-b072-a83be9988f11",
+		"name": "note-taking-app",
+		"description": "## API Endpoints\n\n- `POST /notes`: Create a new note.\n    \n- `GET /notes`: Retrieve all notes.\n    \n- `GET /notes/{id}`: Retrieve a specific note by ID.\n    \n- `PUT /notes/{id}`: Update a specific note.\n    \n- `DELETE /notes/{id}`: Delete a specific note.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "284461"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/notes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Sample Note Title 3\",\n  \"body\": \"This is the body of the sample note 3.\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notes"
+					]
+				},
+				"description": "POST /notes: Create a new note."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/notes/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Sample Note Title 1 updated\",\n  \"body\": \"This is the body of the sample note 1 updated.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/notes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notes",
+						"1"
+					]
+				},
+				"description": "PUT /notes/{id}: Update a specific note."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/notes/3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/notes/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notes",
+						"3"
+					]
+				},
+				"description": "DELETE /notes/{id}: Delete a specific note."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/notes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notes"
+					]
+				},
+				"description": "GET /notes: Retrieve all notes."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/notes/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/notes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notes",
+						"1"
+					]
+				},
+				"description": "GET /notes/{id}: Retrieve a specific note by ID."
+			},
+			"response": []
+		}
+	]
+}
